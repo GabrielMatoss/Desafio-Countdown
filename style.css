@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/top-image.svg), url(./images/bottom-image.svg);
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+h1{
+    color: var(--purple);
+}
+
+ul li span{
+    color: var(--black);
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    color: var(--text-color);
+}
+
+button{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--purple);
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #827cf1 ;
+}
+
+div p{
+    margin-top: .5rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+#countdown div{
+    font-size: max(15px, 4rem);
+    margin: 0 auto;
+}
+
+#countdown{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+img{
+    max-width: 550px;
+    width: 100%;
+}
+/* Modal*/
+.modal{
+    width: 500px;
+    height: 300px;
+    background: #4D4C59;
+    color: #6C63FF;
+    position: absolute;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 25vh;
+    left: 30vw;
+}
+
+
+
+#formulario{
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-direction: column;
+    position: absolute;
+}
+#formulario :first-child{
+    margin-left: 4px;
+}
+input{
+    background-color:var(--light-grey);
+    color: aliceblue;
+    outline-color: var(--light-grey);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: auto;
+    height: 20px;
+}
+#formulario button{
+    margin-top: 30px;
+}
+
+.btn-fechar{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -120px;
+    left: 200px;
+}
+/* Tentativa de Media Queries*/
+@media screen and (min-width:1013px) and (max-width: 1024px){
+    main{
+        display: flex;
+        gap: 30px;
+    }
+}
+
+@media  screen and (min-width: 1012px) and (max-width:1026px){
+    .rocket{
+        display: none;
+    }
+}
+
+@media  screen and  (max-width: 1011px){
+    .rocket{
+        display: none;
+    }
+}
+
+@media  screen and  (max-width: 397px){
+   .container{
+       font-size: 3vw;
+   }
+   #countdown li div{
+       font-size: 12vw;
+   }
+}

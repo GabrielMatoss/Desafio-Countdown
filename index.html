@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>Desafio-Countdown</title>
+
+    <link href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <h1>READY TO LAUNCH IN...</h1>
+            <ul id="countdown">
+                <li>
+                    <span>Dias</span>
+                    <div id="days">00</div>
+                </li>
+               
+                <li>
+                    <span>Horas</span>
+                    <div id="hours">00</div> 
+                </li>
+               
+                <li>
+                    <span>Minutos</span>
+                    <div id="minutes">00</div>
+                </li>
+
+                <li>
+                    <span>Segundos</span>
+                    <div id="seconds">00</div>
+                </li>
+            </ul>
+            <p>Inscreva-se para saber mais sobre o lançamento</p>
+            <button type="submit" onclick="press()" class="btn" form="formulario">Inscreva-se</button>
+        </div>
+            <img  class="rocket"src="./images/rocket.svg" alt="Imagem de um foguete"/>
+
+            <div class="modal">
+                <form id="formulario" action="" method="get" >
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                    <br>
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" placeholder="Digite seu nome" required>
+                    <button type="submit" id= "btn-modal">Enviar</button>
+                </form>
+                <div onclick="fechar()" class="close">
+                <img src="./images/icon_close.svg" alt="botao fechar" class="btn-fechar">
+                </div>
+            </div>
+    </main>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
